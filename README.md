@@ -20,7 +20,7 @@ There is now a folder called dropdown with the files for the new dropdown.compon
       selector: 'app-dropdown',
       template: `
           <select>
-            <option *ngFor="let item of items" [value]="item.id">
+          <option *ngFor="let item of items" [value]="item.id" [selected]="item.id == value">{{ item.name }}</option>
                 {{ item.name }}
             </option>
           </select>
