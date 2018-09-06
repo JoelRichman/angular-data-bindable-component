@@ -100,7 +100,7 @@ The final component looks like this:
       selector: 'app-dropdown',
       template: `
         <select (change)="onValueChange($event.target.value)">
-          <option *ngFor="let item of items" [value]="item.id">{{ item.name }}    </option>
+          <option *ngFor="let item of items" [value]="item.id" [selected]="item.id == value">{{ item.name }}</option>
         </select>
       `,
       providers: [DROPDOWN_VALUE_ACCESSOR]
@@ -234,7 +234,7 @@ The final component looks like this:
       selector: 'app-dropdown',
       template: `
         <select (change)="onValueChange($event.target.value)">
-          <option *ngFor="let item of items" [value]="item.id">{{ item.name }}</option>
+          <option *ngFor="let item of items" [value]="item.id" [selected]="item.id == value">{{ item.name }}</option>
         </select>
       `,
       providers: [DROPDOWN_VALUE_ACCESSOR]
